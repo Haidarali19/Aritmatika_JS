@@ -1,0 +1,1 @@
+Perhitungan bahasa pemrograman javascript didalam satu file yang sama (internal). berisi perhitungan dasar bidang 2D.
