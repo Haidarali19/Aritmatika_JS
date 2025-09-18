@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 JS_perhitungan</title>
+</head>
+<body>
+    <script>
+        document.write(
+            "Muhammad Haidar Althaaf Sutowo - Universitas Muhammadiyah Jakarta - FW03068<br> <br>" +
+
+            //Soal tugas
+            "Tugas Soal JS <br>" +
+            "Diketahui ada beberapa bidang 2D yang terdiri dari :<br>" +
+            "1. Persegi Panjang memiliki panjang 10 cm dan lebar 14 cm.<br>" +
+            "2. Bujur sangkar memiliki sisi yaitu 7 cm.<br>" +
+            "3. Segitiga memiliki alas 3 cm, tinggi1 4 cm, dan miring 5 cm.<br><br>" +
+            "Diketahui : <br>"+
+            "   a. Keliling Persegi panjang : 2 x (panjang + lebar)<br>" + 
+            "   b. Luas Persegi panjang : panjang x lebar <br><br>" +
+            "   c. Keliling Bujur sangkar : 4 x sisi<br>" +
+            "   d.  Luas Bujur sangkar : sisi x sisi<br><br>" +
+            "   e.  Keliling Segitiga : alas + tinggi + miring<br>" +
+            "   f.  Luas Segitiga : ( alas x tinggi) / 2 <br><br>" 
+        );
+            
+            // Deklarasi dan inisialisasi variabel
+            const p = 10;   // nilai panjang persegi panjang
+            const l = 14;   // nilai lebar persegi panjang
+            const s = 7;    // nilai sisi bujur sangkar
+            const a = 3;    // nilai alas bujur sangkar
+            const t = 4;    // nilai tinggi segitiga
+            const m = 5;    // nilai mring segitiga
+            //rumus bidang
+            let K_p = 2 * ( p + l);     // mencari keliling persegi panjang
+            let L_p = p * l;            // mencari luas persegi panjang
+            let K_b = 4 * s;            // mencari keliling bujur sangkar
+            let L_b = s * s;            // mencari luas bujur sangkar
+            let K_s = a + t + m;        // mencari keliling segitiga
+            let L_s = ( a * t ) / 2;    // mencari luas segitiga
+
+            document.write(
+                "Maka hasil dari perhitungannya yaitu : <br><br>" +
+                "a. Keliling Persegi panjang dengan panjang " + p + " cm dan lebar " + l + " cm = " + K_p + "cm <br>" + //cetak keliling persegi panjang
+                "b. dengan luasnya = " + L_p + " cm² <br><br>" + // cetak luas persegi panjang
+
+                "c. Keliling Bujur sangkar dengan sisi " + s + " cm = " + K_b + "cm <br>" + //cetak keliling bujur sangkar
+                "d. dengan luasnya = " + L_b + " cm² <br><br>" + // cetak luas bujur sangkar
+
+                "e. Keliling Segitiga dengan alas " + a + " cm, tinggi " + t + " cm, dan miring " + m + " cm = " + K_s + "cm <br>" + // cetak keliling segitiga
+                "f. dengan luasnya = " + L_s + " cm² <br><br>" // cetak luas segitiga
+
+
+            );
+        
+    </script>
+    
+</body>
+</html>
