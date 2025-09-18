@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Slip Gaji</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+
+        tfoot {
+            background-color: #d9edf7;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Umur</th>
+                <th>Jabatan</th>
+                <th>Status</th>
+                <th>Gaji Pokok</th>
+                <th>Tunjangan Jabatan</th>
+                <th>BPJS</th>
+                <th>Tunjangan Keluarga</th>
+            </tr>
+        </thead>
+    
+        <script> 
+            // script data pegawai
+            let nama = "dodi prayodi";
+            let umur = 25;
+            let jab = "Manajer";
+            let stat = "Menikah";
+            let gapok = "";
+
+            // perulangan if untuk gaji pokok
+            if(jab == "Staff") {
+                gapok = 500000;
+            } else if (jab == "Asisten Manajer") {
+                gapok = 10000000;
+            } else {
+                gapok = 15000000;
+            }
+
+            const t_jab = gapok * 0.15;
+            const t_bpjs = gapok * 0.1;
+            
+            // perulangan ternary tunjangan status menikah
+            const t_stat = (stat == "Menikah") ? gapok * 0.2 : gapok * 0;
+
+            // total dari gaji dan tunjangan
+            const totalGaji = gapok + t_jab + t_bpjs + t_stat;
+
+            // fungsi menjadikan penulisan rupiah IDR
+            function formatRupiah(angka) {
+                return angka.toLocaleString("id-ID");
+            }
+
+            document.write(
+                "<tbody>" + 
+                    "<tr>" +
+                        "<td>" + nama + "</td>" +
+                        "<td>" + umur + "</td>" +
+                        "<td>" + jab + "</td>" +
+                        "<td>" + stat + "</td>" +
+                        "<td> Rp. " + formatRupiah(gapok) + "</td>" +
+                        "<td> Rp. " + formatRupiah(t_jab) + "</td>" +
+                        "<td> Rp. " + formatRupiah(t_bpjs) + "</td>" +
+                        "<td> Rp. " + formatRupiah(t_stat) + "</td>" +
+                    "<tr>" +
+                "</tbody>" +
+                "<tfoot>" +
+                    "<tr>" +
+                        "<td colspan='4'>Total Gaji </td>" +
+                        "<td colspan='4'> Rp. " + formatRupiah(totalGaji) + "</td>"+
+                    "</tr>" +
+                "</tfoot>"
+            );
+
+        </script>
+    </table>
+</body>
+</html>
