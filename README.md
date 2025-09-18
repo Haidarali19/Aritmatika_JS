@@ -1,1 +1,1 @@
-Perhitungan bahasa pemrograman javascript didalam satu file yang sama (internal). berisi perhitungan dasar bidang 2D.
+Perhitungan dengan bahasa pemrograman javascript, berisi kasus perhitungan slip gaji pegawai kantor.
